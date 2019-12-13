@@ -36,7 +36,7 @@ class WeatherDataController {
       if( location.useCoords )
       {
         let url = `http://api.openweathermap.org/data/2.5/weather?lat=${location.lat}&lon=${location.lng}&APPID=${this.apiKey}`
-        console.log( url )
+        //console.log( url )
         http_response = await fetch(url);
         if( ! http_response.ok )
         {
@@ -46,7 +46,7 @@ class WeatherDataController {
       else
       {        
         let url = `http://api.openweathermap.org/data/2.5/weather?q=${location.name}&APPID=${this.apiKey}`
-        console.log( url )
+        //console.log( url )
         http_response = await fetch(url);
         if( ! http_response.ok )
         {
